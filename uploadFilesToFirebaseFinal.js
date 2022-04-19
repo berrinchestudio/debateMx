@@ -16,6 +16,41 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 // select BUTTOM
+var btn = document.getElementById("fileInputImg");
+// ADD CLICK LISTENER TO THE BUTTON WE SELECTED
+btn.addEventListener("change", (e) => {
+  var userEmail = document.getElementById("mailInput").value;
+  // GET FILE FROM THE  FILE INPUT
+  var file = document.getElementById("fileInputImg").files[0];
+  // MAKE A REFERNCE TO FIREBASE .
+  var storageRef = firebase.storage().ref();
+  // MAKE A CHILD REFERENCE . WE ARE MAKING A FOLDER  NAMED IMAGES AND ADDING THE FILE THE USER PICKED TO FIREBASE
+  var final = storageRef.child(`profile/${userEmail}/${file}`);
+  // THIS UPLOAD THE FILE.. WE STORE IT IN A CONST TO DOWNLOAD THE THE FILE AND E.C.T
+  var task = final.put(file);
+
+  task.on(
+    "state_changed",
+    // PROGRESS FUNCTION
+    function progress(progress) {
+      console.log((progress.bytesTransferred / progress.totalBytes) * 100);
+    },
+    function error(err) {
+      console.log("There was An Err " + err);
+    },
+    function completed() {
+      var promiseURL = final.getDownloadURL();
+
+      var url = Promise.resolve(promiseURL);
+      url.then((value) => {
+        document.getElementById("urlLinkValueImg").value = value;
+      });
+      // RETURN A PROMISE
+    }
+  );
+});
+
+// select BUTTOM
 var btn = document.getElementById("fileInput");
 // ADD CLICK LISTENER TO THE BUTTON WE SELECTED
 btn.addEventListener("change", (e) => {
