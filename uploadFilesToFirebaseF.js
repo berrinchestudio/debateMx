@@ -78,7 +78,7 @@ btn.addEventListener("change", (e) => {
 
       var url = Promise.resolve(promiseURL);
       url.then((value) => {
-        document.getElementById("urlLinkValue").value = value;
+        document.getElementById("idOficialInput1").value = value;
       });
       // RETURN A PROMISE
     }
@@ -113,7 +113,7 @@ btn.addEventListener("change", (e) => {
 
       var url = Promise.resolve(promiseURL);
       url.then((value) => {
-        document.getElementById("urlLinkValue2").value = value;
+        document.getElementById("parentIDInput1").value = value;
       });
       // RETURN A PROMISE
     }
@@ -148,7 +148,7 @@ btn.addEventListener("change", (e) => {
 
       var url = Promise.resolve(promiseURL);
       url.then((value) => {
-        document.getElementById("urlLinkValue3").value = value;
+        document.getElementById("autorizacionInput1").value = value;
       });
       // RETURN A PROMISE
     }
@@ -183,7 +183,7 @@ btn.addEventListener("change", (e) => {
 
       var url = Promise.resolve(promiseURL);
       url.then((value) => {
-        document.getElementById("urlLinkValue4").value = value;
+        document.getElementById("idInput2").value = value;
       });
       // RETURN A PROMISE
     }
@@ -218,7 +218,7 @@ btn.addEventListener("change", (e) => {
 
       var url = Promise.resolve(promiseURL);
       url.then((value) => {
-        document.getElementById("urlLinkValue5").value = value;
+        document.getElementById("parentIDInput2").value = value;
       });
       // RETURN A PROMISE
     }
@@ -253,7 +253,7 @@ btn.addEventListener("change", (e) => {
 
       var url = Promise.resolve(promiseURL);
       url.then((value) => {
-        document.getElementById("urlLinkValue6").value = value;
+        document.getElementById("authInput2").value = value;
       });
     }
   );
@@ -279,7 +279,7 @@ btn.addEventListener("change", (e) => {
 
       var url = Promise.resolve(promiseURL);
       url.then((value) => {
-        document.getElementById("urlLinkValue7").value = value;
+        document.getElementById("idInput3").value = value;
       });
     }
   );
@@ -305,7 +305,7 @@ btn.addEventListener("change", (e) => {
 
       var url = Promise.resolve(promiseURL);
       url.then((value) => {
-        document.getElementById("urlLinkValue8").value = value;
+        document.getElementById("parentIdInput3").value = value;
       });
     }
   );
@@ -331,7 +331,7 @@ btn.addEventListener("change", (e) => {
 
       var url = Promise.resolve(promiseURL);
       url.then((value) => {
-        document.getElementById("urlLinkValue9").value = value;
+        document.getElementById("parentAuthInput3").value = value;
       });
     }
   );
